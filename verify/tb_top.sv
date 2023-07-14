@@ -1,4 +1,5 @@
-
+import uvm_pkg::*;
+`include "uvm_macros.svh"
 `include "../interface.sv"
 `include "../../rtl/Design_v1.0.v"
 `include "../sequence_item.sv"
@@ -13,12 +14,12 @@ module tb;
   reg clk;
 
   always #10 clk =~ clk;
-  des_if _if (clk);
+    des_if _if (clk);
 
-	det_1011 u0 	( .clk(clk),
-                     .rstn(_if.rstn),
-                     .in(_if.in),
-                     .out(_if.out));
+  det_1011 u0 	( .clk(clk),
+                  .rstn(_if.rstn),
+                  .in(_if.in),
+                  .out(_if.out));
 
 
   initial begin

@@ -4,6 +4,7 @@
 // flag an error if the design didnt find the pattern and ensure
 // that "out" remains zero, and if the design found the pattern,
 // "out" is set to the correct value.
+`define LENGTH 8
 class scoreboard extends uvm_scoreboard;
   `uvm_component_utils(scoreboard)
   function new(string name="scoreboard", uvm_component parent=null);
